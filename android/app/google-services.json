@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "965503662440",
+    "project_id": "drive-integration-4e2ab",
+    "storage_bucket": "drive-integration-4e2ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965503662440:android:6fb7d2658454167209bedd",
+        "android_client_info": {
+          "package_name": "com.example.google_drive_storage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965503662440-08iq9ceekn5og7ckkqnh7i1tb4t0n8ed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1tIAranUGSF79jKss_It9Pyfy3RILYFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965503662440-08iq9ceekn5og7ckkqnh7i1tb4t0n8ed.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
