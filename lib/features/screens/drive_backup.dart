@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_drive_storage/models/color.dart';
 import 'package:google_drive_storage/models/customer.dart';
 import 'package:google_drive_storage/services/firebase/customer.dart';
 
@@ -38,39 +39,45 @@ class _DriveBackupState extends State<DriveBackup> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: const [BackButton()],
+        flexibleSpace: Container(
+          decoration: BackgroundColor.decoration,
+        ),
+        title: const Text("Add"),
       ),
-      body: Center(
-          child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          TextField(
-            controller: textEditingController1,
-            decoration: const InputDecoration(hintText: "Company Name"),
-          ),
-          TextField(
-            controller: textEditingController2,
-            decoration: const InputDecoration(hintText: "Contact Details"),
-          ),
-          TextField(
-            controller: textEditingController3,
-            decoration: const InputDecoration(hintText: "Contact Name"),
-          ),
-          TextField(
-            controller: textEditingController4,
-            decoration: const InputDecoration(hintText: "Tax Number"),
-          ),
-          OutlinedButton(
-              onPressed: () {
-                _addSampleCustomer();
-                textEditingController1.clear();
-                textEditingController2.clear();
-                textEditingController3.clear();
-                textEditingController4.clear();
-              },
-              child: const Text("ekle"))
-        ],
-      )),
+      body: Container(
+        decoration: BackgroundColor.decoration,
+        child: Center(
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TextField(
+              controller: textEditingController1,
+              decoration: const InputDecoration(hintText: "Company Name"),
+            ),
+            TextField(
+              controller: textEditingController2,
+              decoration: const InputDecoration(hintText: "Contact Details"),
+            ),
+            TextField(
+              controller: textEditingController3,
+              decoration: const InputDecoration(hintText: "Contact Name"),
+            ),
+            TextField(
+              controller: textEditingController4,
+              decoration: const InputDecoration(hintText: "Tax Number"),
+            ),
+            OutlinedButton(
+                onPressed: () {
+                  _addSampleCustomer();
+                  textEditingController1.clear();
+                  textEditingController2.clear();
+                  textEditingController3.clear();
+                  textEditingController4.clear();
+                },
+                child: const Text("ekle"))
+          ],
+        )),
+      ),
     );
   }
 }
