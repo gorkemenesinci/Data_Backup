@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:google_drive_storage/features/screens/backup_view.dart';
-import 'package:google_drive_storage/models/color.dart';
+import 'package:google_drive_storage/features/screens/add_drive.dart';
+import 'package:google_drive_storage/features/utils/color.dart';
 
 class SecondContainer extends StatelessWidget {
   const SecondContainer({super.key});
@@ -14,7 +13,7 @@ class SecondContainer extends StatelessWidget {
 
     return Center(
       child: Container(
-        decoration: ContainerColor.decoration,
+        color: Colors.transparent,
         width: screenWidth,
         height: screenHeight * 0.4,
         child: Column(
@@ -24,7 +23,7 @@ class SecondContainer extends StatelessWidget {
               width: double.infinity,
               height: screenHeight * 0.2,
               child: const Image(
-                image: AssetImage("assets/images/list.png"),
+                image: AssetImage("assets/images/google-drive.png"),
               ),
             ),
             const SizedBox(height: 20),
@@ -35,12 +34,12 @@ class SecondContainer extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const BackupView(),
+                    builder: (context) => const AddDrive(),
                   ),
                 );
               },
               child: const Text(
-                "Database Data View",
+                "Add To Google Drive",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 25,

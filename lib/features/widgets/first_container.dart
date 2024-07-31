@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_drive_storage/features/screens/drive_backup.dart';
-import 'package:google_drive_storage/models/color.dart';
+import 'package:google_drive_storage/features/screens/add_firebase.dart';
+import 'package:google_drive_storage/features/utils/color.dart';
 
 class FirstContainer extends StatelessWidget {
   const FirstContainer({super.key});
@@ -13,7 +13,7 @@ class FirstContainer extends StatelessWidget {
 
     return Center(
       child: Container(
-        decoration: ContainerColor.decoration,
+        color: Colors.transparent,
         width: screenWidth,
         height: screenHeight * 0.4,
         child: Column(
@@ -23,7 +23,7 @@ class FirstContainer extends StatelessWidget {
               width: double.infinity,
               height: screenHeight * 0.2,
               child: const Image(
-                image: AssetImage("assets/images/google-drive.png"),
+                image: AssetImage("assets/images/list.png"),
               ),
             ),
             const SizedBox(height: 20),
@@ -35,12 +35,12 @@ class FirstContainer extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const DriveBackup(),
+                    builder: (context) => const AddFirebase(),
                   ),
                 );
               },
               child: const Text(
-                "Add to Database",
+                "Add To Database",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 25,

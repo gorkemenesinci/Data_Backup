@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:google_drive_storage/models/color.dart';
+import 'package:google_drive_storage/features/screens/company_details.dart';
+import 'package:google_drive_storage/features/utils/color.dart';
 import 'package:google_drive_storage/models/customer.dart';
 import 'package:google_drive_storage/services/firebase/customer.dart';
 
-class BackupView extends StatefulWidget {
-  const BackupView({super.key});
+class AddDrive extends StatefulWidget {
+  const AddDrive({super.key});
 
   @override
-  State<BackupView> createState() => _BackupViewState();
+  State<AddDrive> createState() => _AddDriveState();
 }
 
-class _BackupViewState extends State<BackupView> {
+class _AddDriveState extends State<AddDrive> {
   Firestore firestore = Firestore();
   List<Customer> _customers = [];
   @override
@@ -49,8 +50,22 @@ class _BackupViewState extends State<BackupView> {
                     title: Text(customer.companyName),
                     titleAlignment: ListTileTitleAlignment.center,
                     trailing: TextButton(
-                      onPressed: () {},
-                      child: const Text("data"),
+                      style: const ButtonStyle(
+                        alignment: Alignment.center,
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => CompanyDetails(
+                                  companyName: customer.companyName,
+                                  contactDetails: customer.contactDetails,
+                                  contactName: customer.contactName,
+                                  taxNumber: customer.taxNumber,
+                                )));
+                      },
+                      child: const Text(
+                        "Data Details",
+                        style: TextStyle(color: Colors.black),
+                      ),
                     ),
                   );
                 },

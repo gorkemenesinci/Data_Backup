@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_drive_storage/features/widgets/first_container.dart';
 import 'package:google_drive_storage/features/widgets/second_container.dart';
-import 'package:google_drive_storage/models/color.dart';
+import 'package:google_drive_storage/features/utils/color.dart';
 
 class DriveStorage extends StatefulWidget {
   const DriveStorage({super.key});
