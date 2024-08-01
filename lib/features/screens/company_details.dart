@@ -85,6 +85,7 @@ class _CompanyDetailsState extends State<CompanyDetails> {
               ),
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
+                    shadowColor: Colors.black,
                     padding: EdgeInsets.symmetric(horizontal: horizantal)),
                 onPressed: _uploadToGoogleDrive,
                 child: const Text(

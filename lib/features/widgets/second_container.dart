@@ -28,6 +28,7 @@ class SecondContainer extends StatelessWidget {
             const SizedBox(height: 20),
             OutlinedButton(
               style: OutlinedButton.styleFrom(
+                  shadowColor: Colors.black,
                   textStyle: const TextStyle(fontSize: 20),
                   padding: EdgeInsets.symmetric(horizontal: horizantal)),
               onPressed: () {

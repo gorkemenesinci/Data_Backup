@@ -85,6 +85,7 @@ class _AddFirebaseState extends State<AddFirebase> {
               const SizedBox(height: 20),
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
+                    shadowColor: Colors.black,
                     padding: EdgeInsets.symmetric(horizontal: horizantal)),
                 onPressed: () {
                   _addSampleCustomer();

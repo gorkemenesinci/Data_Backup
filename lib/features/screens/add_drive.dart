@@ -66,7 +66,7 @@ class _AddDriveState extends State<AddDrive> {
                                 )));
                       },
                       child: const Text(
-                        "Data Details",
+                        "Company Details",
                         style: TextStyle(color: Colors.black),
                       ),
                     ),
