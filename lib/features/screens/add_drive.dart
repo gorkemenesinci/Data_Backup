@@ -26,7 +26,9 @@ class _AddDriveState extends State<AddDrive> {
       setState(() {
         _customers = customers;
       });
-    } catch (e) {}
+    } catch (e) {
+      print("$e");
+    }
   }
 
   @override
@@ -48,6 +50,7 @@ class _AddDriveState extends State<AddDrive> {
                   final customer = _customers[index];
                   return ListTile(
                     title: Text(customer.companyName),
+                    subtitle: Text(customer.contactDetails),
                     titleAlignment: ListTileTitleAlignment.center,
                     trailing: TextButton(
                       style: const ButtonStyle(

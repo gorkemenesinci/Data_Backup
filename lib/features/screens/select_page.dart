@@ -3,14 +3,14 @@ import 'package:google_drive_storage/features/widgets/first_container.dart';
 import 'package:google_drive_storage/features/widgets/second_container.dart';
 import 'package:google_drive_storage/features/utils/color.dart';
 
-class DriveStorage extends StatefulWidget {
-  const DriveStorage({super.key});
+class SelectPage extends StatefulWidget {
+  const SelectPage({super.key});
 
   @override
-  State<DriveStorage> createState() => _DriveStorageState();
+  State<SelectPage> createState() => _SelectPageState();
 }
 
-class _DriveStorageState extends State<DriveStorage> {
+class _SelectPageState extends State<SelectPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

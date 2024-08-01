@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_drive_storage/features/widgets/signup_textfield.dart';
 import 'package:google_drive_storage/features/utils/color.dart';
 import 'package:google_drive_storage/models/customer.dart';
@@ -33,7 +34,15 @@ class _AddFirebaseState extends State<AddFirebase> {
         contactDetails: textEditingController2.text,
         contactName: textEditingController3.text,
         taxNumber: textEditingController4.text);
-    await firestore.addCustomers(customer);
+    if (textEditingController1.text.trim() == "" &&
+        textEditingController2.text.trim() == "" &&
+        textEditingController3.text.trim() == "" &&
+        textEditingController4.text.trim() == "") {
+      Fluttertoast.showToast(msg: "These Cannot Are Empty");
+    } else {
+      Fluttertoast.showToast(msg: "Register is Succesfully");
+      await firestore.addCustomers(customer);
+    }
   }
 
   @override
@@ -52,7 +61,7 @@ class _AddFirebaseState extends State<AddFirebase> {
         child: Form(
           child: Center(
               child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SignupTextfield(
                   labelText: "Company Name :",

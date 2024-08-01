@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_drive_storage/features/screens/add_firebase.dart';
-import 'package:google_drive_storage/features/utils/color.dart';
 
 class FirstContainer extends StatelessWidget {
   const FirstContainer({super.key});

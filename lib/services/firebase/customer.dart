@@ -12,13 +12,11 @@ class Firestore {
         'Tax Number': customer.taxNumber,
         'Contact Details': customer.contactDetails
       });
-      print("Customer added successfully: ${customer.companyName}");
     } catch (e) {
-      print("Error Adding Info : $e");
+      FirebaseException(message: "$e", plugin: "");
     }
   }
 
-  // Tüm müşteri verilerini almak için fonksiyon
   Future<List<Customer>> getCustomers() async {
     try {
       final querySnapshot =
@@ -33,7 +31,6 @@ class Firestore {
         );
       }).toList();
     } catch (e) {
-      print("Error Fetching Customers: $e");
       return [];
     }
   }

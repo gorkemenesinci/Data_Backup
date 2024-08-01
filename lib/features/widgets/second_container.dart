@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_drive_storage/features/screens/add_drive.dart';
-import 'package:google_drive_storage/features/utils/color.dart';
 
 class SecondContainer extends StatelessWidget {
   const SecondContainer({super.key});
